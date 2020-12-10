@@ -1,0 +1,15 @@
+x=2
+y=3
+z=complex(x,y)
+print(z)
+print(z.real)
+print(z.imag)
+h='hello'
+print(h)
+print(len(h))
+w='hello '+'world'
+print(w ,len(w))
+print(x,y,z)
+print(h)
+print(type(z),type(x),type(h))
+p
