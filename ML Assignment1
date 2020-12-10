@@ -1,0 +1,48 @@
+import numpy as np
+import matplotlib.pyplot as plt
+alpha = 0.01
+
+
+slope = 2
+intercept = 1
+m = 20
+x = 30*np.random.random((m,1))+(-15)
+x_input = np.append(np.ones((m,1)),x,axis=1)
+print(x_input)
+y = slope*x+intercept
+print(y)
+'''
+Use np.dot(A,B) to multiply matrices A and B
+'''
+def calculate_loss(h,y):
+    #return loss
+
+
+def predict(x,theta) :
+    return np.dot(x,theta)
+#return predicted values
+
+
+def gradient_descent(x,theta,y) :
+    k=y-predict(x,theta)
+    l=x.T.dot(x,theta)
+    newtheta=theta+(2*alpha*l)/m
+    #return updated values of theta after gradient descent
+
+
+theta = np.zeros((2,1))
+loss = []
+for i in range(1,10) :
+    l = calculate_loss(predict(x_input,theta),y)
+    print("Loss  = {}".format(l))
+    theta = #update theta
+    loss.append(l)
+
+plt.plot()
+plt.scatter(x,y)
+x_vec = np.linspace(-15,15)
+plt.plot(x_vec,theta[1][0]*x_vec+theta[0][0])
+plt.show()
+
+fig = plt.subplot()
+fig.plot(loss)
