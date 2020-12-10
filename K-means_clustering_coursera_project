@@ -1,0 +1,42 @@
+from __future__ import print_function
+%matplotlib inline
+import os
+import numpy as np
+import matplotlib.pyplot as plt # it makes some changes to the image
+import matplotlib.image as image #image rescaling, loading and display operations
+plt.style.use("ggplot")
+
+from skimage import io
+from sklearn.cluster import KMeans
+
+from ipywidgets import interact, interactive, fixed, interact_manual, IntSlider
+import ipywidgets as widgets
+
+plt.rcParams['figure.figsize'] = (20, 12)
+
+img = io.imread('images/1-Saint-Basils-Cathedral.jpg')
+ax = plt.axes(xticks=[], yticks=[])
+ax.imshow(img);
+
+img = io.imread('images\1-Saint-Basils-Cathedral.jpg')
+#using imread function from io module.and pass path to the image
+ax= plt.axes(xticks=[],yticks=[])
+#xticks=[] this means we are not showing any scale or dimensions on x axis.Similarly for yticks=[].If we mwention any no. inside the [], then the dimension will be showed according to that scale.
+ax.imshow(img);
+#since we don't want any reference to the matplotlib, we used ';' here.
+
+img.shape
+#here what we get are the dimensions of pixels ie, lenght, breadth of the image pixels and no. of maincolours in the image=Red, blue, green- here.
+
+#since we got a 3d array as image dimensions, we rehape it into a simple array
+img_data= (img/255).reshape(-1,3)
+#we are normalising the pixels from 0-255 to 0-1.that's why we divided img by 255. also in reshape(-1,3), -1 is given so that the reshape will itself detect to how much it should change the 1st dimension of array.
+
+from plot_utils import plot_utils
+# this plot_utils file has merged more than 10 thousand colours
+
+x=plot_utils(img_data, Title-="this image has more than 16 million colours")
+# we are giving img_data to plot_utils function as input which is the modified imgie, it has become a 2d array and it displays the the differnt colours in that image as individual pixels
+x.colorSpace()
+
+# we see that there is smooth transition between the pixels chaniging the colours since they are 16 million. But by using the kmeans clustering algorithm,we reduce them to 60there by compressing the image..
