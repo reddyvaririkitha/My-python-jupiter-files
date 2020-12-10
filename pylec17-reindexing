@@ -1,0 +1,22 @@
+import numpy as np
+import pandas as pd
+from pandas import Series,DataFrame
+from numpy.random import randn
+ser1= Series([1,2,3,4], index=['A','B','C','D'])
+ser1
+ser2=ser1.reindex(['A','B','C','D','z','y','x','w'],fill_value='not in the series')
+ser2
+ser2.reindex(['A','B','C','D','z','y','x','w','v','u'],fill_value='hahaha')
+ser3=Series(['India','China','USA'],index=[0,5,10])
+ser3
+ranger = range(15)
+ranger
+ser3.reindex(ranger)
+ser3.reindex(ranger,method='ffill')
+ser3.reindex(ranger,method='bfill')
+dframe=DataFrame(randn(25).reshape(5,5))
+dframe
+datframe=DataFrame(randn(25).reshape(5,5),index=['a','b','d','e','f'],columns=['c1','c2','c3','c4','c5'])
+datframe
+datframe.reindex(index=['a','b','c','d','e','f'])
+dframe
