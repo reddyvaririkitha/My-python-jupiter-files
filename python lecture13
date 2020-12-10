@@ -1,0 +1,6 @@
+import numpy as np 
+
+myar=np.arange(5)
+myar
+
+np.save(('myarray'),myar)
