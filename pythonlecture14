@@ -1,0 +1,63 @@
+import numpy as np
+import pandas as pd
+from pandas import Series, DataFrame
+
+a=(1,5,4,4)
+#a=[1, 5, 44, "tiki"]
+#a.append(0.99)
+print(a)
+#a.remove("tiki")
+print(a)
+print(max(a))
+print(min(a))
+'''a.insert(0, 99)
+print(a)
+#a.sort()
+print(a)
+#a.sort(reverse=1)
+print(a)
+#a.clear()
+print(a)'''
+print(a.count(4))
+
+obj=Series([14,27,30,41])
+obj
+
+obj.values
+
+obj.index
+
+corona_cases=Series([12799,10789,1582,428],index=['confirmed','active','recovered','deceased'])
+corona_cases, corona_cases['confirmed']
+
+corona_cases[corona_cases<1000]
+
+'active' in corona_cases
+
+c_c_d= corona_cases.to_dict()
+c_c_d
+
+c_c_s= Series(c_c_d)
+c_c_s
+
+otherlist= ['confirmed','active','recovered','deceased','others']
+c_c_2=Series(c_c_s, index=otherlist)
+c_c_2, otherlist,c_c_s
+
+pd.isnull(c_c_2),pd.notnull(c_c_2)
+
+obj
+
+c_c_2+corona_cases
+
+c_c_2.name='corona cases list'
+
+
+c_c_2
+
+c_c_2.index.name= 'list'
+
+c_c_2
+
+#this code show error as we can't assignheading to the values using this syntax.
+c_c_2.values.name='population'
