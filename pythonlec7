@@ -1,0 +1,28 @@
+import numpy as np
+mylist1 =[1,2,3]
+myarray1 =np.array(mylist1)
+mylist1.dtype
+#this creates a message as list can have objects of any datatype
+myarray1
+myarray1.dtype
+mylist2= [11,22,33,44]
+myarray2 =np.array(mylist2)
+myarray2
+mylist2
+mylist=(mylist1, mylist2)
+mylist
+myarray=np.array(mylist)
+myarray
+myarray.dtype
+myarray.shape
+np.zeros(3).dtype
+myzerosarray=np.zeros([3,7])
+myzerosarray
+myzerosarray.dtype
+np.ones([3,3])
+np.empty(2)
+np.eye(3)
+np.arange(3)
+np.arange(3,5)
+np.arange(1,10,4)
+
