@@ -1,0 +1,42 @@
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+points=np.arange(-1,1,0.1)
+points
+dx,dy=np.meshgrid(points,points)
+dx
+np.where(dx<0)
+dy
+z=(np.cos(dx)+np.cos(dy))
+n=(np.sin(dx)+np.sin(dy))
+m=(np.tan(dx)+np.tan(dy))
+plt.imshow(n)
+plt.colorbar()
+plt.title('graph of sindx+sindy')
+plt.imshow(z),plt.imshow(n)
+plt.colorbar()
+plt.title('plot of cosdx+cosdy'),plt.title('graph of sindx+sindy')
+plt.imshow(m)
+plt.colorbar()
+plt.title('plot of tandx+tandy')
+A=np.array([1,2,3,4])
+A
+B=np.arange(10,41,10)
+B
+condition=np.array([True,False,True,False])
+answer_1= [(A_val if condition_element else B_val) for A_val,condition_element,B_val in zip(A,condition,B)]
+answer_1
+answer_2= np.where(condition,A,B)
+answer_2
+m=np.arange(1,10).reshape((3,3))
+m
+m.sum(0),m.mean(0),m.mean(),m.std(),m.var()
+boolean_array= np.array([True,False,False])
+boolean_array.any(),boolean_array.all()
+arr=np.random.randn(5)
+arr
+arr.sort()
+arr
+aray=np.array([12,38,2,2,9,2,79,337])
+araynp.unique(aray)
+np.in1d([1,2,3,38,12],aray)
