@@ -1,0 +1,6 @@
+import numpy as np
+inputmatrix=np.random.randn(30,1)
+inputmatrix
+weightmatrix1=np.random.randn(30,5)
+weightmatrix1
+for 1 in range
