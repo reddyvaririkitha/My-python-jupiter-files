@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+alpha = 0.01
+
+
+slope = 2
+intercept = 1
+m = 20
+x = 30*np.random.random((m,1))+(-15)
+x_input = np.append(np.ones((m,1)),x,axis=1)
+print(x_input)
