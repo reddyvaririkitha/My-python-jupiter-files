@@ -1,0 +1,14 @@
+import numpy as np
+import pandas as pd
+from pandas import Series, DataFrame
+
+import webbrowser
+website='https://www.bing.com/search?q=world%27s+tall+buildings+with+heights&qs=n&form=QBRE&sp=-1&pq=world%27s+tall+buildings+with+&sc=0-28&sk=&cvid=056E4873B4114A82B6BEC2E0C72D2F17'
+webbrowser.open(website)
+
+wtt={'name':['Burj Khalifa','Shanghai Tower','Abraj Al-Bait clock tower'],'Country':['UAE','China','Saudi Arabia']}
+
+wtt_frame=DataFrame(wtt)
+wtt_frame
+wtt_frame.columns
+cors_frame.
