@@ -1,0 +1,27 @@
+import numpy as np
+inputmatrix=np.random.randn(30,1)
+inputmatrix
+weightmatrix1=np.random.randn(30,5)
+weightmatrix1
+weightmatrix2=np.random.randn(5,5)
+weightmatrix2
+weightmatrix3=np.random.randn(5,5)
+weightmatrix3
+weightmatrix4=np.random.randn(5,5)
+weightmatrix4
+weightmatrix5=np.random.randn(5,5)
+weightmatrix5
+weightmatrix6=np.random.randn(5,1)
+weightmatrix6
+outputmatrix1=np.dot(weightmatrix1.T,inputmatrix)
+outputmatrix1
+outputmatrix2=np.dot(weightmatrix2.T,outputmatrix1)
+outputmatrix2
+outputmatrix3=np.dot(weightmatrix3.T,outputmatrix2)
+outputmatrix3
+outputmatrix4=np.dot(weightmatrix4.T,outputmatrix3)
+outputmatrix4
+outputmatrix5=np.dot(weightmatrix5.T,outputmatrix4)
+outputmatrix5
+mainoutputmatrix=np.dot(weightmatrix6.T,outputmatrix5)
+mainoutputmatrix
